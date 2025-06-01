@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Fetch</title>
+  <link rel="stylesheet" href="./myWeather.css">
+</head>
+<body>
+  <div class="weather-vortex">
+    <aside class="sidebar">
+      <h2>Weather Fetch</h2>
+      <form class="search-form">
+        <input type="text" id="location-input" placeholder="Enter Location">
+        <button type="submit" id="search-button">Go</button>
+      </form>
+    </aside>
+    <main class="weather-display">
+      <div class="loading" style="display:none;">Spinning up...</div>
+      <div class="error-message" style="display:none;"></div>
+      <div class="weather-rectangle" style="display:none;">
+        <h3 class="city-name" id="city-name"></h3>
+        <div class="weather-icon">
+          <!-- Video element acting as background -->
+          <video id="weather-gif" autoplay loop muted playsinline></video>
+        </div>
+        <div class="temp-info">
+          <span id="temperature"></span>
+        </div>
+        <p class="weather-desc" id="weather-desc"></p>
+        <div class="extra-details">
+          <p>Feels: <span id="feels-like"></span></p>
+          <p>Max: <span id="max-temp"></span></p>
+          <p>Min: <span id="min-temp"></span></p>
+          <p>Wind: <span id="wind-speed"></span></p>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="./myWeather.js"></script>
+</body>
+</html>

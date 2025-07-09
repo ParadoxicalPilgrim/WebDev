@@ -1,29 +1,30 @@
-const http=require('http');
 const fs=require('fs');
+const mongoose=require('mongodb');
+const express=require('express');
+const exp=express();
 
+const users=require('./MOCK_DATA.json');
 
-const myServer=http.createServer((req,res)=>{
-    const date=new Date();
-    let info = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} ${date.getDay()} ${date.getTime()}: User Request\n`;
-    fs.appendFile('./log.txt',info,{encoding:'utf-8'},(err)=>{
+exp.use(express.json());
+exp.use(express.urlencoded({extended:false}));
 
-        switch(req.url){
-            case '/':res.end('Hi! There from JS! Check out the about and arnav!');
-            break
-            case '/about':res.end('Just learning about server!');
-            break
-            case '/this':res.end('Hi! You travelled to another place.');
-            break
-            default:res.end('Error! Page not found! err:404');
-        }
-
-        if (err){
-            console.log('Error writing to file:',err);
-        }
-    });
-    console.log('New request received!');
-})
-
-myServer.listen(6969,()=>{
-    console.log('Server started!');
+exp.get('/',(req,res)=>{
+    res.send('Homepage');
 });
+
+exp.get('/users',(req,res)=>{
+    return res.json(users);
+});
+
+exp.post('/users',(req,res)=>{
+    let body=req.body;
+    console.log(body);
+    users.push({id:users.length+1,...body});
+
+    fs.writeFile('./MOCK_DATA.json',JSON.stringify(users,null,2),(err)=>{
+        if(err){console.log('Failed to write into file');
+        }else{console.log('Written into file successfully');}
+    });
+});
+
+exp.listen(1234,()=>{console.log('Server started!');});

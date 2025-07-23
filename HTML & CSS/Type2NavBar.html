@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+        
+        .nav-container{
+            margin: 0;
+            padding: 0;
+            width:100%;
+        }
+        .nav1{
+            margin:0;
+            padding:0;
+            background-color: aliceblue;
+            display: block;
+            width:300px;
+        }
+
+        .nav1 ul{
+            list-style-type: none;
+            width:200px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav1 ul li{
+            width:100%;
+            padding: 7px;
+            margin:0;
+        }
+
+        .nav1 ul li a{
+            text-decoration: none;
+            color:black;
+            display: block;
+        }
+
+        .nav1 .login{
+            width:150px;
+            background: linear-gradient(to right, lightgreen,green);
+            border:1px solid pink;
+        }
+
+        .nav1 li a:hover{
+            background: linear-gradient(to right,green,lightgreen);
+        }
+
+        .nav1 .login:hover{
+            background: linear-gradient(to right,green,lightgreen);
+            cursor:default;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="nav1">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li> <button class="login">Login</button></li> 
+        </ul>
+        </nav>
+    </div>
+    
+    
+</body>
+</html>

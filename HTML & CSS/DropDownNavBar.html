@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar</title>
+    <style>
+
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .nav1{
+            background-color: yellow;
+            padding:10px;
+        }
+
+        .nav1 ul{
+            margin:0;
+            padding: 0;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav1 a{
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            color:black;
+            position: relative;
+        }
+
+        .nav1 .dropdown_content{
+            display:none;
+        }
+
+        .nav1 .dropdown:hover .dropdown_content{
+            display: block;
+            position:absolute;
+            background-color:yellow;
+        }
+
+        .login-btn{
+            border:none;
+            border-radius: 5px;
+        }
+
+        .login-btn:hover{
+            background: linear-gradient(to right, orange,yellow,red);
+            border: none;
+            border-radius:5px;
+
+        }
+
+        .nav1 a::after{
+            content:" ";
+            position:absolute;
+            height:2px;
+            width:100%;
+            bottom:0;
+            left:0;
+            background: linear-gradient(to right,lightblue,orange,red);
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+
+        }
+
+        .nav1 a:hover::after{
+            transform: scaleX(1);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="nav1">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="dropdown"><a href="#">About</a>
+                <div class="dropdown_content">
+                    <a href="#">Our Story</a>
+                    <a href="#">Team</a>
+                    <a href="#">Contact</a>
+                </div>
+                </li>
+                <li><a href="#">Products</a></li>
+                <li><button class="login-btn">Login</button></li>
+            </ul>
+        </nav>
+    </div>
+    
+</body>
+</html>

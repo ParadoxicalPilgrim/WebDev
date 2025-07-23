@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Boxes</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .big-box {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            padding: 10px;
+            background-color: lightgrey;
+            border: 1px solid black;
+        }
+        .small-box {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightblue;
+            border: 1px solid black;
+            font-size: 16px;
+        }
+
+        .big-box-spacearound{
+            display: flex;
+            justify-content: space-around;
+            background-color: lightgrey;
+            padding: 10px;
+        }
+
+        .big-box-alignitems{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: lightgrey;
+            padding: 10px;
+        }
+
+        .big-box-wrap{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: lightgrey;
+            padding: 10px;
+        }
+
+        .big-box-aligncontent{
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+            background-color: lightgrey;
+            padding: 10px;
+        }
+
+        .big-box-flexxgroww{
+            display: flex;
+            flex-grow: unset;
+            background-color: lightgrey;
+            padding: 10px;
+        }
+
+        .big-box-alignselff{
+            display: flex;
+            justify-content: space-around;
+            background-color: lightgrey;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="big-box">
+            <div class="small-box">1</div>
+            <div class="small-box">2</div>
+            <div class="small-box">3</div>
+            <div class="small-box">4</div>
+            <div class="small-box">5</div>
+        </div>
+        <div class="big-box-spacearound">
+            <div class="small-box">1</div>
+            <div class="small-box">2</div>
+            <div class="small-box">3</div>
+            <div class="small-box">4</div>
+            <div class="small-box">5</div>
+        </div>
+        <div class="big-box-alignitems">
+            <div class="small-box">1</div>
+            <div class="small-box">2</div>
+            <div class="small-box">3</div>
+            <div class="small-box">4</div>
+            <div class="small-box">5</div>
+        </div>
+        <div class="big-box-wrap">
+            <div class="small-box">1</div>
+            <div class="small-box">2</div>
+            <div class="small-box">3</div>
+            <div class="small-box">4</div>
+            <div class="small-box">5</div>
+        </div>
+        <div class="big-box-aligncontent">
+            <div class="small-box">1</div>
+            <div class="small-box">2</div>
+            <div class="small-box">3</div>
+            <div class="small-box">4</div>
+            <div class="small-box">5</div>
+        </div>
+        <div class="big-box">
+            <div class="small-box">5</div>
+            <div class="small-box">4</div>
+            <div class="small-box">3</div>
+            <div class="small-box">2</div>
+            <div class="small-box">1</div>
+        </div>
+        <div class="big-box-flexxgroww">
+            <div class="small-box">1</div>
+            <div class="small-box">2</div>
+            <div class="small-box">3</div>
+            <div class="small-box">4</div>
+            <div class="small-box">5</div>
+        </div>
+        <div class="big-box-alignselff">
+            <div class="small-box" style="align-self: stretch; height:75px;">1</div>
+            <div class="small-box">2</div>
+            <div class="small-box">3</div>
+            <div class="small-box">4</div>
+            <div class="small-box">5</div>
+        </div>
+    </div>
+</body>
+</html>

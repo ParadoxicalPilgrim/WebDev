@@ -1,0 +1,120 @@
+/* Body Styles */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  font-family: 'Orbitron', sans-serif;
+  user-select: none;
+}
+
+/* Removing cursor because its annoying*/
+
+#clockContent,
+#clockContent * {
+  cursor: none !important;
+  user-select: none;
+}
+
+/* ThE Card Container */
+.card-container {
+  width: 700px;
+  height: 350px;
+  background: #0a0a0a;
+  border: 3px solid #f80202;
+  border-radius: 20px;
+  /*box-shadow: 0 0 20px #000000, 0 0 40px #E52B2C;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Logo Container */
+.logo-container {
+  width: 150px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Batman Logo Image */
+.batman-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  user-select: none;
+  border:1.5px solid black;
+  border-radius: 5px;
+  /*filter: drop-shadow(0 0 5px #E52B2C) drop-shadow(0 0 10px #E52B2C);*/
+}
+
+/* Clock Content */
+.clock-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 30px;
+  /* I AM VENGEANCE */
+  box-sizing: border-box;
+}
+
+
+/* Time Section */
+.time-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Time Units */
+.time-unit {
+  color: #E52B2C;
+  font-size: 3.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 0 0 2.5px #E52B2C, 0 0 2.5px #E52B2C, 0 0 2.5px #E52B2C;
+}
+
+/* Semicolon blinking */
+.time-separator {
+  color: #E52B2C;
+  font-size: 3.5rem;
+  animation: blink 2s infinite;
+}
+
+
+/* Date Section */
+.date-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Date Items */
+.date-item {
+  color: #E52B2C;
+  font-size: 1.2rem;
+  text-shadow: 0 0 3px #E52B2C;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Blink Animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
